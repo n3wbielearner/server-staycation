@@ -17,6 +17,7 @@ const activitySchema = new mongoose.Schema({
   isPopular: {
     type: Boolean,
   },
+  itemId: [{ type: ObjectId, ref: "Item" }],
 });
 
 module.exports = mongoose.model("Activity", activitySchema);
