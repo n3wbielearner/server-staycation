@@ -259,8 +259,8 @@ module.exports = {
       const item = await Item.find()
         .populate({ path: "imageId", select: "id imageUrl" })
         .populate({ path: "categoryId", select: "id name" });
-
-      console.log(item);
+      // console.log("viewItem");
+      // console.log(item);
       const category = await Category.find();
       //console.log(category);
       const alertMessage = req.flash("alertMessage");
@@ -310,6 +310,9 @@ module.exports = {
       const item = await Item.findOne({ _id: id })
         .populate({ path: "imageId", select: "id imageUrl" })
         .populate({ path: "categoryId", select: "id name" });
+
+      // console.log("showEditItem");
+      // console.log(item);
       const category = await Category.find();
       const alertMessage = req.flash("alertMessage");
       const alertStatus = req.flash("alertStatus");
