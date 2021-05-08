@@ -2,8 +2,9 @@ var seeder = require("mongoose-seed");
 var mongoose = require("mongoose");
 
 // Connect to MongoDB via Mongoose
+//"mongodb://127.0.0.1:27017/db_staycation",
 seeder.connect(
-  "mongodb://127.0.0.1:27017/db_staycation",
+  "mongodb+srv://codeathome:password123$@cluster0.ilshg.mongodb.net/db_staycation?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useCreateIndex: true,
